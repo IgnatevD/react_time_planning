@@ -1,0 +1,38 @@
+.formAddPeople {
+  margin-bottom: 20px;
+}
+
+.titel {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+.inputEmail {
+  margin-bottom: 30px;
+}
+.text {
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 20px;
+  color: rgba(24, 28, 39, 0.6);
+}
+.textDontEmail,
+.listEmail {
+  margin-bottom: 60px;
+  font-size: 16px;
+  line-height: 20px;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+.btnAddPeople {
+  display: block;
+  margin: 0 auto;
+}

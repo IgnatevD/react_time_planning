@@ -1,0 +1,68 @@
+@import '../../../styles/variables.scss';
+
+.userContainer {
+  display: inline-flex;
+  align-items: center;
+}
+
+.text {
+  margin-right: 20px;
+
+  color: var(--color-main-title);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  text-transform: capitalize;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 78px;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  @media screen and (max-width: 767px) {
+    padding: 6px;
+    background-color: var(--color-secondary-btn-background);
+    color: var(--color-main-background);
+    border-radius: 50%;
+    transition: all $trans-func $trans-dur;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-btn-background);
+      color: var(--color-secondary-btn-background-hover);
+    }
+  }
+  @media screen and (min-width: 768px) {
+    color: var(--color-label-input);
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: var(--color-btn-background);
+      transform: scale(1.1);
+    }
+  }
+}
+
+.btnText {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+
+  @media screen and (max-width: 767px) {
+    transform: translateX(2px);
+  }
+}

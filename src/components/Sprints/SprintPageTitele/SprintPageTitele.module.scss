@@ -1,0 +1,38 @@
+.btnConteinerTitel {
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    padding-top: 40px;
+    padding-left: 20px;
+  }
+}
+
+.btnConteiner {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 500px;
+}
+
+.btnDescription {
+  margin-top: 20px;
+}
+.btnEditTitel {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+}
+
+.title {
+  hyphens: auto;
+  margin-right: 20px;
+  padding: 0px;
+}
+
+.conteinerTitelandBtn {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: 1280px) {
+    width: 869px;
+  }
+}

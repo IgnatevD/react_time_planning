@@ -1,0 +1,62 @@
+@import 'modern-normalize/modern-normalize.css';
+@import 'react-toastify/dist/ReactToastify.css';
+
+@import './styles/variables.scss';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  width: 100vw;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.22;
+  font-family: $mainFont;
+  color: var(--color-main-text);
+  background-color: var(--color-main-background);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.light-theme {
+  @include light-theme;
+}
+
+.dark-theme {
+  @include dark-theme;
+}

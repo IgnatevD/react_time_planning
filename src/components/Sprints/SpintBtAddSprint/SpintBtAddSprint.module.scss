@@ -1,0 +1,37 @@
+.btnSprintAdd {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  margin: 0px;
+  @media screen and (min-width: 768px) {
+    position: static;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 20px;
+  }
+}
+
+.btnSprintAddText {
+  font-weight: 500;
+  font-size: 18px;
+  display: none;
+  color: var(--color-main-title);
+  @media screen and (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.conteinerBtnAddSrint {
+  text-align: center;
+  border: none;
+  background: none;
+
+  &:hover {
+    color: var(--color-btn-background);
+  }
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

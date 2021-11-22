@@ -1,0 +1,35 @@
+.conteinerPeopleAdd {
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    padding-left: 20px;
+  }
+}
+
+.iconPeopleAdd {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  color: var(--color-main-title);
+}
+
+.btnPeopleAdd {
+  display: flex;
+  padding-left: 0px;
+
+  border: none;
+  background: none;
+  text-decoration: underline;
+  color: var(--color-main-title);
+
+  font-size: 18px;
+  line-height: 22px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    & use {
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    font-weight: 500;
+  }
+}

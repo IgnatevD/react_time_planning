@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+
+.wrapper {
+  position: relative;
+  padding: 15px 0 0;
+  width: 100%;
+}
+
+.input {
+  font-family: inherit;
+  position: relative;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--color-input-border);
+  outline: none;
+  color: var(--color-input-text);
+  padding: 7px 0 7px 8px;
+  background: transparent;
+  transition: border-color $trans-func $trans-dur;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .label {
+    cursor: text;
+    top: 20px;
+  }
+
+  &:focus ~ .bottomLine::before {
+    left: 0;
+    width: 100%;
+  }
+
+  -webkit-user-select: text; /* Chrome, Opera, Safari */
+  -moz-user-select: text; /* Firefox 2+ */
+  -ms-user-select: text; /* IE 10+ */
+  user-select: text; /* Standard syntax */
+}
+
+.inputError {
+  border-color: var(--color-input-error);
+}
+
+.bottomLine {
+  position: relative;
+  background-color: var(--color-btn-background);
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: inherit;
+    transition: all $trans-func $trans-dur;
+  }
+}
+
+.bottomLineError {
+  background-color: var(--color-input-error);
+}
+
+.label {
+  position: absolute;
+  top: -4px;
+  display: block;
+  transition: all $trans-func $trans-dur;
+  color: var(--color-label-input);
+}
+
+.labelError {
+  color: var(--color-input-error);
+}
+
+.input:focus {
+  ~ .label {
+    position: absolute;
+    top: -4px;
+    display: block;
+    transition: all $trans-func $trans-dur;
+    color: var(--color-btn-background);
+  }
+  ~ .labelError {
+    color: var(--color-input-error);
+  }
+}
+
+.error {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--color-input-error);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}

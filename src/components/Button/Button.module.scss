@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.btn {
+  padding: 11px 44px;
+  border: none;
+  border-radius: 25px;
+  box-shadow: $shadow-btn;
+
+  letter-spacing: 0.04em;
+  font-size: 18px;
+  line-height: 1.22;
+  font-weight: 500;
+  text-transform: capitalize;
+
+  color: var(--color-btn-text);
+  background-color: var(--color-btn-background);
+
+  transition: all, $trans-func $trans-dur;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    background-color: var(--color-btn-background-hover);
+  }
+}

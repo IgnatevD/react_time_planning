@@ -1,0 +1,160 @@
+.titel {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 32px;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 49px;
+  }
+}
+.dateLabel {
+  padding-left: 0px;
+}
+
+.inputNameSprint {
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 53px;
+  }
+}
+.date {
+  outline: none;
+  background: none;
+  color: var(--color-main-title);
+  @media screen and (min-width: 768px) {
+    width: 200px;
+    height: 32px;
+    border: none;
+    border-bottom: 2px solid var(--color-input-border);
+  }
+  @media screen and (min-width: 1280px) {
+    height: 30px;
+  }
+}
+.errorsDate {
+  font-size: 14px;
+  color: var(--color-input-error);
+}
+
+.datePickerConteiner {
+  position: relative;
+  margin-right: 30px;
+}
+
+.datePickerLabel {
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--color-label-input);
+}
+
+.checkboxLabel {
+  font-size: 18px;
+  line-height: 22px;
+  color: rgba(24, 28, 39, 0.6);
+  margin-bottom: 46px;
+}
+.containerDate {
+  margin-bottom: 51px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: baseline;
+  }
+}
+.formAddSprint {
+  margin-bottom: 20px;
+}
+.inputDays {
+  margin-top: 48px;
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
+}
+
+.inputDays ::-webkit-outer-spin-button,
+.inputDays ::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputDays [type='number'] {
+  -moz-appearance: textfield;
+}
+
+.btnAddSprint {
+  display: block;
+  margin: 0 auto;
+}
+.iconPolygonDown {
+  position: absolute;
+  cursor: pointer;
+  z-index: 100;
+  fill: var(--color-secondary-btn-background);
+  top: 30px;
+  right: 10px;
+  width: 12px;
+  height: 10px;
+
+  &:hover {
+    fill: var(--color-btn-background-hover);
+  }
+}
+//чекбокс
+/* для элемента input c type="radio" */
+.checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.checkboxLabel {
+  color: var(--color-main-title);
+}
+/* для элемента label связанного с .checkbox */
+.checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+/* создание в label псевдоэлемента  before со следующими стилями */
+.checkbox + label::before {
+  content: '';
+  display: inline-block;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+/* стили при наведении курсора на радио */
+.checkbox:not(:disabled):not(:checked) + label:hover::before {
+  // border: 1px solid #d1d2d4;
+  box-sizing: border-box;
+}
+/* стили для активной радиокнопки (при нажатии на неё) */
+.checkbox:not(:disabled):active + label::before {
+  box-sizing: border-box;
+}
+/* стили для радиокнопки, находящейся в фокусе */
+.checkbox:focus + label::before {
+  outline: none;
+}
+/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+.checkbox:focus:not(:checked) + label::before {
+  border-color: var(--color-secondary-btn-background-hover);
+}
+/* стили для радиокнопки, находящейся в состоянии checked */
+.checkbox:checked + label::before {
+  background-image: url('../../../icons/Ellipse.svg');
+}
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.checkbox:disabled + label::before {
+  background-color: red;
+}

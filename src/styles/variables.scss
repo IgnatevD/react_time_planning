@@ -1,0 +1,76 @@
+//font
+$mainFont: 'Montserrat', sans-serif;
+//animation
+$trans-func: linear;
+$trans-dur: 250ms;
+//shadow
+$shadow-auth: 0px 6px 26px rgba(0, 5, 97, 0.1);
+$shadow-btn: 0px 3px 4px rgba(255, 107, 8, 0.3);
+$shadow-project-hover: 0px 4px 4px;
+//$shadow-project-hover: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$shadow-modal: 0px 6px 26px rgba(0, 5, 97, 0.1);
+//colors
+@mixin light-theme {
+  --color-main-text: #000000;
+  --color-main-title: #181c27;
+  --color-main-background: #f1f2f7;
+  --color-auth-background: #fafafa;
+
+  --color-card-background: #ffffff;
+  --color-card-text: #ffffff;
+  --color-modal-background: #ffffff;
+
+  --color-input-text: #181c27;
+  --color-label-input: rgba(24, 28, 39, 0.6);
+  --color-input-border: rgba(24, 28, 39, 0.2);
+  --color-input-background: #ffffff;
+  --color-input-error: #ff0000;
+
+  --color-btn-text: #ffffff;
+  --color-secondary-btn-background: #a6a6a6;
+  --color-secondary-btn-background-hover: #8b8b8b;
+  --color-btn-background: #ff6b08;
+  --color-btn-background-hover: #ee5f00;
+
+  --color-calendar-main: #181c27;
+  --color-calendar-title: #1b1c20;
+  --color-calendar-accent: #fff;
+  --color-calendar-disabled: #ccc;
+  --color-calendar-hover: #ee5f00;
+  --color-calendar-bk-main: rgba(225, 225, 225, 0.7);
+  --color-calendar-bk-title: #fff;
+  --color-calendar-bk-accent: #ff6b08;
+  --color-calendar-shadow: 0 6px 26px rgba(0, 5, 97, 0.1);
+}
+
+@mixin dark-theme {
+  --color-main-text: #ffffff;
+  --color-main-title: #c7c9d1;
+  --color-main-background: #252525;
+  --color-auth-background: #5c5b5b;
+
+  --color-card-background: #19191b;
+  --color-card-text: #000000;
+  --color-modal-background: #1d1d1d;
+
+  --color-input-text: #a2a5ac;
+  --color-label-input: rgba(255, 245, 245, 0.6);
+  --color-input-border: rgba(146, 148, 153, 0.2);
+  --color-input-background: #000000;
+  --color-input-error: #ff0000;
+
+  --color-btn-text: #ffffff;
+  --color-secondary-btn-background: #a6a6a6;
+  --color-secondary-btn-background-hover: #8b8b8b;
+  --color-btn-background: #ff6b08;
+  --color-btn-background-hover: #ee5f00;
+
+  --color-calendar-main: #ccc;
+  --color-calendar-title: #fff;
+  --color-calendar-accent: #fff;
+  --color-calendar-disabled: #181c27;
+  --color-calendar-bk-main: rgba(0, 0, 0, 0.7);
+  --color-calendar-bk-title: #1b1c20;
+  --color-calendar-bk-accent: #ff6b08;
+  --color-calendar-shadow: 0 6px 26px rgba(255, 250, 153, 0.1);
+}

@@ -1,0 +1,22 @@
+@import '../../../styles/variables.scss';
+
+.charContainer {
+  width: 688px;
+  height: 400px;
+  overflow-x: auto;
+
+  @media screen and (min-width: 1280px) {
+    width: 859px;
+    height: 500px;
+  }
+}
+
+.charTitle {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  margin-bottom: 10px;
+  @media screen and (min-width: 1280px) {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,139 @@
+@import '../../../styles/variables.scss';
+
+.sprintsConteiner {
+  position: relative;
+  display: none;
+  width: 256px;
+
+  padding: 20px 26px 80px 0px;
+  border-right: 1px solid rgba(24, 28, 39, 0.1);
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    width: 189px;
+    height: 88vh;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    height: 85vh;
+    padding: 20px 30px 50px 0px;
+  }
+}
+
+.sprintsList {
+  overflow-y: auto;
+  max-height: 63vh;
+
+  @media screen and (min-width: 1280px) {
+    max-height: 55vh;
+  }
+}
+
+.sprintBoxColor {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  margin-right: 10px;
+  background: #ffffff;
+  box-shadow: 0px 6px 26px rgba(0, 5, 97, 0.1);
+  border-radius: 5px;
+}
+
+.title {
+  hyphens: auto;
+}
+
+.sprintItem {
+  position: relative;
+  height: 36px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sprintLink {
+  text-decoration: none;
+  color: inherit;
+  padding-left: 51px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    border-radius: 6px;
+    width: 35px;
+    height: 35px;
+    background-color: #ffffff;
+  }
+  &:hover {
+    & span {
+      color: var(--color-btn-background-hover);
+    }
+    &::before {
+      z-index: -1;
+      border-radius: 5px;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+.sprintItem::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.active {
+  & .title {
+    font-weight: 700;
+  }
+}
+
+.conteinerBtnAddProj {
+  position: fixed;
+  bottom: 80px;
+}
+.btnProjAdd {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.conteinerBtnAddSrint {
+  text-align: center;
+}
+
+//Стили скрола
+
+.sprintsList::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.sprintsList::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: var(--color-card-background);
+}
+
+.sprintsList::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--color-btn-background);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+}

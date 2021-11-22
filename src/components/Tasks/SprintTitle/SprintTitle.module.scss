@@ -1,0 +1,61 @@
+@import '../../../styles/variables.scss';
+
+.titleBox {
+  margin-bottom: 30px;
+}
+.sprintTitleWrapper {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 10px;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 20px;
+    padding: 4px 0 4px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 0;
+  }
+}
+
+.sprintTitle {
+  hyphens: auto;
+  margin-right: 20px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23;
+  color: var(--color-main-title);
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    line-height: 1.22;
+  }
+}
+
+.editInp {
+  outline: none;
+  background: none;
+  padding-top: 5px;
+  border: none;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23;
+  max-width: 250px;
+  color: inherit;
+
+  -webkit-user-select: text; /* Chrome, Opera, Safari */
+  -moz-user-select: text; /* Firefox 2+ */
+  -ms-user-select: text; /* IE 10+ */
+  user-select: text; /* Standard syntax */
+}
+
+.editForm {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    font-size: 36px;
+    line-height: 1.22;
+    max-width: 334px;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,105 @@
+@import '../../styles/variables.scss';
+
+.form {
+  text-align: left;
+}
+
+.emailLabel {
+  position: relative;
+
+  display: block;
+  margin-bottom: 30px;
+}
+
+.emailInp {
+  width: 100%;
+  padding: 8px;
+
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: --color-input-text;
+  outline: none;
+
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: --color-input-text;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.emailLabelText {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: --color-input-text;
+
+  transition: all 200ms linear;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.emailLabelText {
+  .emailInp:not(:placeholder-shown) + &,
+  .emailInp:focus + & {
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+  }
+}
+
+.error {
+  position: absolute;
+  left: 30px;
+  bottom: -2px;
+  transform: translateY(100%);
+
+  font-size: 14px;
+  color: --color-btn-background;
+}
+
+.membersTitle {
+  margin: 0 0 20px;
+
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: --color-input-text;
+}
+
+.membersList {
+  margin-bottom: 60px;
+}
+
+.membersItem {
+  letter-spacing: 0.04em;
+  color: --color-main-title;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.membersEmpty {
+  margin: 0 0 60px;
+
+  letter-spacing: 0.04em;
+  color: --color-main-title;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.submitWrapper {
+  text-align: center;
+}

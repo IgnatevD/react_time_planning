@@ -1,0 +1,181 @@
+@import '../../styles/variables.scss';
+
+.overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  background-color: rgba(24, 28, 39, 0.25);
+  z-index: 1200;
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    height: 100vh;
+  }
+}
+
+.chartOverlay {
+  composes: overlay;
+  justify-content: center;
+}
+
+.mainOverlay {
+  composes: overlay;
+  justify-content: flex-end;
+}
+
+.modal {
+  position: relative;
+  overflow-x: auto;
+  background-color: var(--color-modal-background);
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.mainModal {
+  composes: modal;
+  height: 100%;
+  padding: 60px 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 512px;
+    padding: 120px 30px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 530px;
+    padding: 120px 50px;
+  }
+}
+
+.chartModal {
+  composes: modal;
+  padding: 30px 20px;
+  overflow-y: auto;
+
+  max-height: calc(100vh - 20px);
+  @media screen and (min-width: 768px) {
+    max-width: calc(100vw - 48px);
+    padding: 15px;
+  }
+}
+
+.chartModal::-webkit-scrollbar {
+  height: 7px;
+}
+
+.chartModal::-webkit-scrollbar-track {
+  // -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+  background-color: var(--color-btn-text);
+}
+
+.chartModal::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--color-btn-background);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+}
+
+.btn {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  border: none;
+  color: var(--color-main-text);
+  background-color: transparent;
+  transition: all $trans-func $trans-dur;
+
+  @media screen and (min-width: 768px) {
+    right: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-card-text);
+    background-color: var(--color-btn-background);
+  }
+}
+
+//Анимация закрытия модалки
+.closeModalAnimate {
+  -webkit-animation: closeModalAnimate 0.45s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: modal 0.45s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes closeModalAnimate {
+  0% {
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+    transform: rotate3d(1, 1, 0, 0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 0, 70deg);
+    transform: rotate3d(1, 1, 0, 70deg);
+    opacity: 0;
+  }
+}
+@keyframes closeModalAnimate {
+  0% {
+    -webkit-transform: rotate3d(1, 1, 0, 0deg);
+    transform: rotate3d(1, 1, 0, 0deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 1, 0, 70deg);
+    transform: rotate3d(1, 1, 0, 70deg);
+    opacity: 0;
+  }
+}
+// Анимация открытия модалки
+
+.modal {
+  -webkit-animation: modal 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: modal 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes modal {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes modal {
+  0% {
+    -webkit-transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    transform: rotateX(-30deg) translateX(300px) skewX(30deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}

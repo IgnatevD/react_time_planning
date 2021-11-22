@@ -1,0 +1,212 @@
+@import '../../styles/variables.scss';
+
+.link {
+  text-decoration: none;
+  outline: none;
+  padding: 10px;
+  display: block;
+  height: 100%;
+  color: inherit;
+  @media screen and (min-width: 768px) {
+    padding: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding: 28px 30px;
+  }
+}
+.item {
+  position: relative;
+  flex-basis: calc(100% / 2 - 10px);
+  max-width: 135px;
+  margin-top: 10px;
+  margin-left: 10px;
+
+  min-height: 136px;
+  border-radius: 5px;
+
+  &:nth-child(3n + 1) {
+    background-color: #8c72df;
+    color: #8c72df;
+    &:hover,
+    &:focus {
+      box-shadow: $shadow-project-hover #8c72df;
+    }
+  }
+
+  &:nth-child(3n + 2) {
+    background-color: #ff765f;
+    color: #ff765f;
+    &:hover,
+    &:focus {
+      box-shadow: $shadow-project-hover #ff765f;
+    }
+  }
+
+  &:nth-child(3n + 3) {
+    background-color: #71df87;
+    color: #71df87;
+    &:hover,
+    &:focus {
+      box-shadow: $shadow-project-hover #71df87;
+    }
+  }
+
+  &:nth-child(4n + 1) {
+    @media screen and (min-width: 768px) {
+      background-image: url('../../icons/Group777.svg');
+      background-repeat: repeat-x;
+      background-position: left 25px;
+    }
+    @media screen and (min-width: 1280px) {
+      background-position: -170px 76px;
+    }
+  }
+
+  &:nth-child(4n + 2) {
+    @media screen and (min-width: 768px) {
+      background-image: url('../../icons/Group777.svg');
+      background-repeat: repeat-x;
+      background-position: -236px 25px;
+    }
+    @media screen and (min-width: 1280px) {
+      background-position: -470px 76px;
+    }
+  }
+
+  &:nth-child(4n + 3) {
+    @media screen and (min-width: 768px) {
+      background-image: url('../../icons/Group777.svg');
+      background-repeat: repeat-x;
+      background-position: -472px 25px;
+    }
+    @media screen and (min-width: 1280px) {
+      background-position: -18px 76px;
+    }
+  }
+
+  &:nth-child(4n + 4) {
+    @media screen and (min-width: 768px) {
+      background-image: url('../../icons/Group777.svg');
+      background-repeat: repeat-x;
+      background-position: -472px 25px;
+    }
+    @media screen and (min-width: 1280px) {
+      background-position: -318px 76px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 3 - 20px);
+    max-width: 206px;
+    margin-top: 20px;
+    margin-left: 20px;
+    min-height: 216px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    flex-basis: calc(100% / 4 - 30px);
+    max-width: 260px;
+    margin-top: 30px;
+    margin-left: 30px;
+    min-height: 270px;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+}
+
+.item:nth-child(-n + 3) {
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+
+.item:nth-child(-n + 4) {
+  @media screen and (min-width: 1280px) {
+    margin-top: 0;
+  }
+}
+
+.projectTitle {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  margin-bottom: 6px;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  color: var(--color-card-text);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+    font-size: 26px;
+    line-height: 1.23;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 20px;
+  }
+}
+
+.projectDescription {
+  hyphens: auto;
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--color-card-text);
+  transform: scale(0);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .item:hover &,
+  .item:focus & {
+    transform: scale(100%);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+  }
+}
+.itemDeleteBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: none;
+  color: inherit;
+
+  transition: all $trans-func $trans-dur;
+
+  &:hover,
+  &:focus {
+    svg {
+      transform: scale(1.15);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.deleteIcon {
+  width: 16px;
+  height: 16px;
+  @media screen and (min-width: 768px) {
+    width: 18px;
+    height: 18px;
+  }
+}

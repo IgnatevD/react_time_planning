@@ -1,0 +1,127 @@
+.sprintProjectConteiner {
+  position: relative;
+  display: none;
+  width: 256px;
+  padding: 20px 26px 80px 0px;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    border-right: 1px solid var(--color-input-border);
+    width: 189px;
+    height: 89vh;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 200px;
+    height: 85vh;
+    padding: 20px 30px 50px 0px;
+  }
+}
+
+.sprintListProject {
+  overflow-y: auto;
+  max-height: 63vh;
+
+  @media screen and (min-width: 1280px) {
+    max-height: 55vh;
+  }
+}
+.title {
+  hyphens: auto;
+}
+
+.projectItem {
+  position: relative;
+  height: 36px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.projectLink {
+  text-decoration: none;
+  color: inherit;
+  padding-left: 51px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+  }
+
+  &:hover {
+    & span {
+      color: var(--color-btn-background-hover);
+    }
+    &::before {
+      z-index: -1;
+      border-radius: 5px;
+      box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+.projectItem:nth-child(3n + 1) {
+  &.projectItem::before {
+    background-color: #8c72df;
+  }
+}
+
+.projectItem:nth-child(3n + 2) {
+  &.projectItem::before {
+    background-color: #ff765f;
+  }
+}
+
+.projectItem:nth-child(3n + 3) {
+  &.projectItem::before {
+    background-color: #71df87;
+  }
+}
+
+.projectItem::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  z-index: -1;
+}
+.active {
+  & .title {
+    font-weight: 700;
+  }
+}
+
+//Стили скрола
+
+.sprintListProject::-webkit-scrollbar {
+  width: 7px;
+}
+
+.sprintListProject::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: var(--color-card-background);
+}
+
+.sprintListProject::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--color-btn-background);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0.25) 75%,
+    transparent 75%,
+    transparent
+  );
+}

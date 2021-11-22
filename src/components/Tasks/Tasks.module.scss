@@ -1,0 +1,147 @@
+@import '../../styles/variables.scss';
+
+.tasksSection {
+  display: flex;
+}
+
+.tasksContainer {
+  width: 280px;
+  position: relative;
+  @media screen and (min-width: 768px) {
+    width: 472px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 70px;
+    width: 885px;
+  }
+}
+
+.backToSprints {
+  border-bottom: 1px solid var(--color-input-border);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.dayFindContainer {
+  @media screen and (min-width: 768px) {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  @media screen and (min-width: 1280px) {
+    height: 85px;
+    margin: 0;
+  }
+}
+
+.titleNoTask {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23;
+  color: var(--color-input-border);
+  @media screen and (min-width: 768px) {
+    margin-left: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 0;
+  }
+}
+
+.tasksList {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 620px;
+    overflow-y: auto;
+  }
+  @media screen and (min-width: 1280px) {
+    max-height: 523px;
+  }
+}
+
+.scrollBar {
+  @media screen and (min-width: 768px) {
+    position: relative;
+  }
+}
+.chartBtn {
+  position: fixed;
+  z-index: 100;
+  bottom: 100px;
+  @media screen and (min-width: 768px) {
+    right: calc(50% - 305px);
+
+    bottom: 105px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: calc(50% - 580px);
+  }
+}
+
+.addTask {
+  position: fixed;
+  right: calc(50% - 140px);
+  bottom: 100px;
+  z-index: 100;
+  @media screen and (min-width: 768px) {
+    right: calc(50% - 305px);
+    top: 155px;
+    bottom: auto;
+  }
+  @media screen and (min-width: 1280px) {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    top: 90px;
+  }
+}
+
+.addTaskText {
+  display: none;
+
+  @media screen and (min-width: 1280px) {
+    display: block;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    color: var(--color-main-title);
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .findForm {
+    display: none;
+  }
+}
+
+//Стили скрола
+@media screen and (min-width: 768px) {
+  .tasksList::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  .tasksList::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: var(--color-card-background);
+  }
+
+  .tasksList::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--color-btn-background);
+    background-image: -webkit-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.25) 25%,
+      transparent 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.25) 50%,
+      rgba(255, 255, 255, 0.25) 75%,
+      transparent 75%,
+      transparent
+    );
+  }
+}

@@ -1,0 +1,51 @@
+.btGoBackLink {
+  text-decoration: none;
+  color: var(--color-main-title);
+}
+.btGoBack {
+  margin-bottom: 40px;
+  padding: 10px 0px;
+  border: none;
+  background: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .arrow {
+    fill: var(--color-main-title);
+  }
+  &:active,
+  &:hover,
+  &:focus {
+    font-weight: 550;
+    & .arrow {
+      fill: var(--color-btn-background-hover);
+    }
+  }
+}
+
+.btGoBackTitel {
+  color: var(--color-main-title);
+  @media screen and (min-width: 768px) {
+    width: 70px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.arrow {
+  width: 30px;
+  height: 10px;
+  margin-right: 20px;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    display: block;
+    height: 34px;
+  }
+}

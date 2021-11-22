@@ -1,0 +1,170 @@
+@import '../../../styles/variables.scss';
+
+.taskWrapper {
+  position: relative;
+  width: 280px;
+  min-height: 215px;
+  background: var(--color-card-background);
+  box-shadow: $shadow-auth;
+  border-radius: 5px;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: var(--color-main-text);
+  margin-bottom: 10px;
+  @media screen and (min-width: 768px) {
+    width: 210px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-left: 5px;
+    width: 869px;
+    min-height: 65px;
+    transition: all, $trans-func $trans-dur;
+    &:hover,
+    &:focus {
+      transform: scale(1.01);
+    }
+  }
+}
+
+.taskCard {
+  padding: 20px;
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    justify-content: space-between;
+    justify-self: baseline;
+    align-items: center;
+    padding: 20px 40px 20px 30px;
+  }
+}
+
+.taskTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.04em;
+  color: var(--color-main-title);
+  @media screen and (min-width: 1280px) {
+    width: 170px;
+    text-align: start;
+    border-bottom: 1px solid var(--color-input-border);
+    margin: 0;
+    padding-bottom: 5px;
+  }
+}
+
+.taskItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+.taskItem:not(:last-child) {
+  @media screen and (min-width: 1280px) {
+    width: 170px;
+    justify-content: flex-start;
+  }
+}
+
+.taskItemDesc {
+  @media screen and (min-width: 768px) {
+    width: 98px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+.removeBtn {
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  @media screen and (min-width: 1280px) {
+    position: static;
+  }
+}
+
+.taskItemForm {
+  align-items: center;
+}
+
+.selectBox {
+  width: 50px;
+  overflow: hidden;
+  border: none;
+  position: relative;
+  padding: 0;
+  padding-bottom: 5px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--color-input-border);
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+.selectBox:after {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--color-btn-background);
+  position: absolute;
+  top: 40%;
+  right: 5px;
+  content: '';
+  z-index: 98;
+}
+.selectBox {
+  select {
+    width: 50px;
+    border: none;
+    position: relative;
+    z-index: 99;
+    background: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    color: var(--color-main-text);
+    option {
+      color: black;
+    }
+  }
+}
+
+.taskItemInp {
+  width: 60px;
+  font-size: 14px;
+  outline: none;
+  background: none;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid var(--color-input-border);
+  color: inherit;
+  text-align: right;
+  // &::-webkit-inner-spin-button {
+  //   display: none;
+  // }
+  // -moz-appearance: textfield;
+
+  @media screen and (min-width: 768px) {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: 1280px) {
+    text-align: left;
+    padding: 5px 0;
+  }
+}

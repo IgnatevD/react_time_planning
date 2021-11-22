@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  padding: 10px 0;
+  border-top: 1px solid var(--color-input-border);
+  text-align: center;
+}
+
+.text {
+  color: var(--color-main-title);
+}
+
+.link {
+  margin-left: 4px;
+  color: var(--color-btn-background);
+  transition: all $trans-func $trans-dur;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    background-color: var(--color-btn-background);
+    transition: width $trans-func $trans-dur;
+  }
+
+  &:hover::before {
+    left: 0;
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 4px;
+}

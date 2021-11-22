@@ -1,0 +1,38 @@
+@import '../../styles/variables.scss';
+
+.formTitle {
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.23;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+  }
+}
+
+.titleInput {
+  margin-bottom: 58px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 50px;
+  }
+}
+
+.descInput {
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.btnSubmit {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: block;
+}

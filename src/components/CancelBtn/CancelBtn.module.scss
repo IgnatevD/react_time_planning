@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.btn {
+  margin: 0 auto;
+  display: block;
+
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+
+  text-transform: capitalize;
+  font-size: 18px;
+  color: var(--color-label-input);
+  text-decoration: underline;
+
+  transition: all $trans-func $trans-dur;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
+    color: var(--color-main-title);
+  }
+}
